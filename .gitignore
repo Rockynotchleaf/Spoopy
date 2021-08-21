@@ -1,0 +1,7 @@
+token.0
+tmdb_api.0
+lib/cogs/__pycache__/*
+lib/db/__pycache__/*
+.vscode*
+data/db/*
+lib/channels.py
