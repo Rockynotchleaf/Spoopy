@@ -3,7 +3,7 @@ from discord.ext.commands import command
 from discord.errors import HTTPException
 import tmdbsimple as tmdb
 from django.core.validators import URLValidator
-from channels import TRAILER_CHANNEL_ID
+from ..channels import TRAILER_CHANNEL_ID
 
 from ..db import db
 

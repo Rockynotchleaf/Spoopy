@@ -3,7 +3,7 @@ from discord import Embed
 from datetime import datetime
 import random, time
 from discord.errors import HTTPException
-from channels import TRAILER_CHANNEL_ID, POLL_CHANNEL_ID
+from ..channels import TRAILER_CHANNEL_ID, POLL_CHANNEL_ID
 
 from ..db import db
  

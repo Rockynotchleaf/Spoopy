@@ -1,6 +1,6 @@
 from discord.ext.commands import Bot as BotBase
 from glob import glob
-from channels import OWNER_IDS
+from ..channels import OWNER_IDS
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 

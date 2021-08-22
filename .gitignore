@@ -5,3 +5,5 @@ lib/db/__pycache__/*
 .vscode*
 data/db/*
 lib/channels.py
+lib/__pycache__/*
+lib/bot/__pycache__/*
