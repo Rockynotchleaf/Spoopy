@@ -122,7 +122,7 @@ class Poll(Cog):
     def calculate_winner(self, message_reactions):
         scores = {}
         high_score = 0
-        for key, value in message_reactions.items():
+        for key, value in message_reactions:
             scores.setdefault(value, []).append(key)
             if value > high_score:
                 high_score = value
