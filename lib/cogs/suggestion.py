@@ -38,6 +38,8 @@ class Suggestion(Cog):
             videos = self.getVideos(movie['id'])
             if len(videos['results']) == 0:
                 await ctx.send("The Great Beyond could not conjure a preview for this movie")
+                db.execute("INSERT INTO movie_suggestions VALUES (?,?,?,?)", movie['title'], None, None, False)
+                await ctx.send(f"{movie['title'].capitalize()} has been added to the catacombs")
                 return
             for item in videos['results']:
                 if 'Trailer' in item['type']:
