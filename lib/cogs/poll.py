@@ -120,17 +120,16 @@ class Poll(Cog):
                     return selected_choice, most_voted
 
     def calculate_winner(self, message_reactions):
-        scores = {}
-        high_score = 0
-        for key, value in message_reactions:
-            scores.setdefault(value, []).append(key)
-            if value > high_score:
-                high_score = value
-        results = scores[high_score]
-        if len(results) == 1:
-            return results[0]
-        else:
-            return 'TIE', results
+        reactions = []
+        for reaction in message_reactions:
+            reactions.append(reaction.count)
+        winner = max(message_reactions, key=lambda r: r.count)
+
+        if reactions.count(winner) > 1:
+            return 'TIE'
+            
+        return winner
+        
 
 def setup(bot):
     bot.add_cog(Poll(bot))
